@@ -1,0 +1,7 @@
+Frames {
+    AIULIN18Fr01: 0x30, AIU, 1 {
+        AirClngErrSts, 0;
+        AirClngSts, 2;
+        ErrRespAIU, 7; 
+    }
+}

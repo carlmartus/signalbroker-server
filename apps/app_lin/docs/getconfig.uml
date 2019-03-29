@@ -1,0 +1,46 @@
+@startuml
+note over Arduino, Machine
+scenario should support
+restaring server and/or
+restarting arduino
+end note
+Arduino -> Machine: DHCP aquire IP
+Machine -> Arduino: IP received
+note over Arduino
+send hash needs to be called as heartbeat
+allowing server to send (Configuration_update)
+every 2000 ms or so
+end note
+
+Arduino -> Config_Boot_Server: send_config_hash(hash)
+note over Config_Boot_Server
+Config_Payload_Server_id_M..Ardunios -> Arduino: respond config(ip, hash, 4000)
+resolve ip from sender by mapping
+id to the correct pid
+end note
+Config_Boot_Server -> Config_Payload_Server_id_M..Ardunios: tunnel(req, ip, port, hash)
+note over Data_Payload_Server_id2
+Payload server now know target ip
+end note
+Config_Payload_Server_id_M..Ardunios -> Data_Payload_Server_id2: tunnel(req, ip, port, hash)
+note over Arduino
+Following responses are possible (dependant on client query)
+end note
+note over Config_Payload_Server_id_M..Ardunios
+Hash is curried using current time stamp
+to force arduino reloading to achive full
+arduino cache clean.
+end note
+Config_Payload_Server_id_M..Ardunios -> Arduino: respond config(ip, hash, empty, 4000)
+Config_Payload_Server_id_M..Ardunios -> Arduino: respond config(ip, hash, port 4000)
+Config_Payload_Server_id_M..Ardunios -> Arduino: respond config(ip, hash, payload 4000)
+Config_Payload_Server_id_M..Ardunios -> Arduino: respond config(ip, hash, mode 4000)
+note over Arduino
+Arduino needs to check port 4000
+and compare current with previous
+hash to know if the current config is valid
+if not it should query all relevant data
+end note
+Arduino -> Arduino: check if config is updated
+Data_Payload_Server_id2 <-> Arduino: Traffic is flowing(port 2001)
+@enduml

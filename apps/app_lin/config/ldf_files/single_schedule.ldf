@@ -1,0 +1,27 @@
+Schedule_tables {
+    CcmLin18ScheduleTable1 {
+        CCMLIN18Fr02 delay 10.000 ms;
+        HVCHLIN18Fr02 delay 10.000 ms;
+        CCMLIN18Fr05 delay 10.000 ms;
+        CCMLIN18Fr02 delay 10.000 ms;
+        HusLin18Fr01 delay 15.000 ms;
+        CCMLIN18Fr02 delay 10.000 ms;
+        HVCHLIN18Fr01 delay 10.000 ms;
+        CCMLIN18Fr01 delay 10.000 ms;
+        CCMLIN18Fr02 delay 10.000 ms;
+        SHMRLIN18Fr01 delay 10.000 ms;
+        SHRRLIN18Fr01 delay 10.000 ms;
+        CCMLIN18Fr02 delay 10.000 ms;
+        AIULIN18Fr01 delay 5.000 ms;
+        CPMLIN18Fr01 delay 15.000 ms;
+        CCMLIN18Fr02 delay 10.000 ms;
+        CCMLIN18Fr05 delay 10.000 ms;
+        HusLin18Fr01 delay 15.000 ms;
+        CCMLIN18Fr02 delay 10.000 ms;
+        CCMLIN18Fr01 delay 10.000 ms;
+        SHMRLIN18Fr01 delay 10.000 ms;
+        CCMLIN18Fr02 delay 10.000 ms;
+        SHRRLIN18Fr01 delay 10.000 ms;
+        CCMLIN18Fr03 delay 15.000 ms;
+    }
+}

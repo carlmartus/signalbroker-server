@@ -1,0 +1,4 @@
+Signals {
+	AirClnrAdvErrSts: 2, 3, AAC, CCM;
+	AirClnrAdvErrNeg: 2, -3, AAC, CCM;
+}

@@ -1,0 +1,65 @@
+{
+   "chains" : [
+      {
+         "physical" : {
+            "signal_base_pid" : "signal_base_pid",
+            "device_name" : "vcan0",
+            "id" : "phys1",
+            "type" : "can",
+            "dbc_file" : "configuration/can_files/SPA0610/SPA0610_140404_BodyCANhs.dbc"
+         },
+         "router" : {
+            "signal_base_pid" : "signal_base_pid",
+            "namespace" : "BodyCANhs"
+         }
+      },
+      {
+         "router" : {
+            "namespace" : "ChassisCANhs",
+            "signal_base_pid" : "signal_base_pid_2"
+         },
+         "physical" : {
+            "type" : "can",
+            "dbc_file" : "configuration/can_files/SPA0610/SPA0610_140404_ChassisCANhs.dbc",
+            "signal_base_pid" : "signal_base_pid_2",
+            "device_name" : "vcan1",
+            "id" : "phys2"
+         }
+      },
+      {
+         "router" : {
+            "namespace" : "PropulsionCANhs",
+            "signal_base_pid" : "signal_base_pid_3"
+         },
+         "physical" : {
+            "signal_base_pid" : "signal_base_pid_3",
+            "device_name" : "udp2",
+            "target_host" : "127.0.0.1",
+            "id" : "phys3",
+            "type" : "udp",
+            "server_port" : 2001,
+            "target_port" : 2000,
+            "dbc_file" : "configuration/can_files/SPA0610/SPA0610_140404_BodyCANhs.dbc"
+         }
+      },
+      {
+         "physical" : {
+            "id" : "virtual_phys",
+            "device_name" : "virtual",
+            "signal_base_pid" : "virtual_sb",
+            "dbc_file" : "",
+            "type" : "virtual"
+         },
+         "router" : {
+            "signal_base_pid" : "virtual_sb",
+            "namespace" : "virtual"
+         }
+      }
+   ],
+   "gateway" : {
+      "tcp_socket_port" : 4040,
+      "gateway_pid" : "gateway_pid"
+   },
+   "reflectors" : [],
+   "default_namespace" : "BodyCANhs"
+}

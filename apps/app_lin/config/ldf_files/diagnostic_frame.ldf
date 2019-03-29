@@ -1,0 +1,12 @@
+Diagnostic_frames {
+    MasterReq: 60 {
+        MasterReqB0, 0;
+        MasterReqB1, 8;
+        MasterReqB2, 16;
+        MasterReqB3, 24;
+        MasterReqB4, 32;
+        MasterReqB5, 40;
+        MasterReqB6, 48;
+        MasterReqB7, 56;
+    }
+}

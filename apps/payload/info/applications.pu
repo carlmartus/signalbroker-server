@@ -1,0 +1,14 @@
+@startuml
+agent "app_ngcan" as ngcan
+agent "app_udpcan" as udpcan
+component "CAN library" as lib1
+component "CAN library" as lib2
+node "Signal broker" as signalbase
+
+ngcan <--> lib1
+udpcan <--> lib2
+ethernet <--> udpcan
+socketcan <--> ngcan
+lib1 <--> signalbase
+lib2 <--> signalbase
+@enduml

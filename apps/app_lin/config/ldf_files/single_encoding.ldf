@@ -1,0 +1,8 @@
+Signal_encoding_types {
+    AirClngErrSts {
+        logical_value, 0, "AirClngErrSts_NoErr";
+        logical_value, 1, "AirClngErrSts_Err";
+        logical_value, 2, "AirClngErrSts_ShortCircuit";
+        logical_value, 3, "AirClngErrSts_OpenCircuit";
+    }
+}

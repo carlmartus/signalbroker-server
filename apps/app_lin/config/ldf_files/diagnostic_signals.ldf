@@ -1,0 +1,3 @@
+Diagnostic_signals {
+    MasterReqB0: 8, 0;
+}

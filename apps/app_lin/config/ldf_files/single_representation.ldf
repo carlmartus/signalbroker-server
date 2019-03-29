@@ -1,0 +1,16 @@
+Signal_representation {
+    Boolean : FanBoostVentnFlgRiAmprFanBoostVentnLimRe,
+        FanBoostVentnFlgRiFanBoostVentnFullDutyCycRe, FanBoostVentnFlgRiFanBoostVentnSpRe,
+        FanBoostVentnFlgRiFanBoostVentnTLimRe, FanBoostVentnFlgRiRpmFanBoostVentnMaxRe,
+        FanBoostVentnRstReRi, HvCooltHeatrEnad, HvCooltHeatrProtnOfSelfTmpHwProtn,
+        HvCooltHeatrProtnOfSelfTmpOvrheatg, HvCooltHeatrProtnOfSelfTmpProtnOfSelfTmp,
+        HvCooltHeatrProtnOfSelfTmpProtnOfSelfTmpResd, HvCooltHeatrSnsrFltCooltTInSnsrFlt,
+        HvCooltHeatrSnsrFltCooltTOutSnsrFlt, HvCooltHeatrSnsrFltResdForSnsrFlt,
+        HvCooltHeatrSnsrFltTInMtrlSnsrFlt, HvCooltHeatrSrvRqrdCircForDrvrShoOrOpen,
+        HvCooltHeatrSrvRqrdICnsOutOfRng, HvCooltHeatrSrvRqrdMemErr, HvCooltHeatrSrvRqrdSrvRqrd,
+        HvCooltHeatrSrvRqrdSrvRqrdResd, HvCooltHeatrWarnCooltTOutOfRng, HvCooltHeatrWarnFltInCom,
+        HvCooltHeatrWarnFltPrsnt, HvCooltHeatrWarnFltPrsntResd, HvCooltHeatrWarnHvOutOfRng,
+        HvCooltHeatrWarnULoOutOfRng, SeatClimaReqForRowFirstRiSeatHeatErrRst,
+        SeatClimaReqForRowFirstRiSeatHeatFanErrRst, SeatClimaReqForRowSecRiSeatHeatErrRst,
+        SeatClimaReqForRowSecRiSeatHeatFanErrRst, VoltFanBoostVentnReLoAndOverRi;
+}

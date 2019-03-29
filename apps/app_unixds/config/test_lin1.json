@@ -1,0 +1,56 @@
+{
+   "default_namespace" : "BodyCANhs",
+   "chains" : [
+      {
+         "type" : "can",
+         "namespace" : "BodyCANhs",
+         "device_name" : "vcan0",
+         "dbc_file" : "configuration/can_files/SPA0610/SPA0610_140404_BodyCANhs.dbc"
+      },
+      {
+         "type" : "lin",
+         "namespace" : "Lin1",
+         "ldf_file" : "apps/app_lin/config/ldf_files/SPA1910_LIN18.ldf",
+         "schedule_file" : "../app_lin/config/ldf_files/single_schedule.ldf",
+         "schedule_table_name" : "CcmLin18ScheduleTable1",
+         "schedule_autostart" : true,
+         "device_name" : "lin",
+         "server_port" : 2002,
+         "target_host" : "127.0.0.1",
+         "target_port" : 2003
+      },
+      {
+         "type" : "lin",
+         "namespace" : "Lin2",
+         "ldf_file" : "apps/app_lin/config/ldf_files/SPA1910_LIN18.ldf",
+         "schedule_file" : "apps/app_lin/config/ldf_files/single_schedule.ldf",
+         "schedule_table_name" : "CcmLin18ScheduleTable1",
+         "schedule_autostart" : true,
+         "device_name" : "lin",
+         "server_port" : 2002,
+         "target_host" : "127.0.0.1",
+         "target_port" : 2003
+      },
+      {
+         "type" : "virtual",
+         "namespace" : "virtual",
+         "device_name" : "virtual"
+      }
+   ],
+   "gateway" : {
+      "tcp_socket_port" : 4040,
+      "gateway_pid" : "gateway_pid"
+   },
+   "reflectors" : [
+	   {
+		   "application_pid": "reflector_powertrain",
+		   "reflect": [
+			   {
+				   "source": "BodyCANhs",
+				   "dest": "PropulsionCANhs",
+				   "exclude": ["CEMBodyFr15", "CEMBodyFr22"]
+			   }
+		   ]
+	   }
+   ]
+}
