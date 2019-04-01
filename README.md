@@ -41,7 +41,7 @@ However, the preferred way of accessing the system is by using grpc. Follow this
 
 * [Install elixir](https://elixir-lang.org/install.html)
 * Clone this repository
-* Make sure your configuration/interfaces.json makes sense
+* Make sure your configuration/interfaces.json makes sense (or try out of the box)
 * Start the software by doing
 
 ```
@@ -66,5 +66,5 @@ canplayer vcan0=can0 -I myfile.log
 
 ## TODO
 - [ ] Provide pre build docker image
-- [ ] Add default configuration
+- [x] Add default configuration
 - [ ] Add grpc sample code
