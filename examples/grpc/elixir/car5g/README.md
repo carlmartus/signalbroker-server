@@ -7,7 +7,7 @@ Subscription is done using grpc to the sinalbroker. Gprc host address is "localh
 
 The subscribed signals are then dispatched every 100ms to some_host:2017.
 
-## Installation, confiuration
+## Installation, configuration
 
 start the server and make sure it uses [configuration file:](config/intefaces.json)
 
