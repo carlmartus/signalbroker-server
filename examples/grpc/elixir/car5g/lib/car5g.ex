@@ -19,7 +19,7 @@ defmodule Car5g do
   @send_data false
 
   @namespace "VirtualCanInterface"
-  # @flexray_namespace "FlexrayBackbone"
+  # @flexray_namespace "Flexray"
 
   @signals (
     signal1 = Base.SignalId.new(name: "BenchC_a", namespace: Base.NameSpace.new(name: @namespace))
@@ -142,7 +142,7 @@ defmodule Car5g do
   def dispatch_data(response_map, state) do
     response_map_with_defaults = Map.merge(response_map, @default_info)
     {:ok, encoded_map} = Poison.encode(add_timestamp(response_map_with_defaults))
-    Car5g.Server.send_message(state.tcp_connection, encoded_map)
+    Car5g.Client.send_message(state.tcp_connection, encoded_map)
   end
 
   def update_map(map, name, value, conversion \\ &(&1)) do

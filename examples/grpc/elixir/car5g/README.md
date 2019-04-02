@@ -1,19 +1,17 @@
 # Car5g
 
-**This application is uded for 5g car**
+## Example application
 
-## Installation
+The sample application subscribes to a few signals and dispatches them to a given server (some.host:2017) with a given time intrvall.
+Subscription is done using grpc to the sinalbroker. Gprc host address is "localhost:50051" which currently assumes that this app runs on them same machine as the signalbroker.
+
+The subscribed signals are then dispatched every 100ms to some_host:2017.
+
+## Installation, confiuration
 
 start the server and make sure it uses [configuration file:](config/intefaces.json)
 
-### Prerequisites
-
-Signalbroker running with a can shield, get upp and running using the prebuild binaries. Relevant network is SafetyCANexposed so one physical interface is needed.
-
-
-### configuration
-
-### running
+## Running
 
 Copy the car5g folder to the host and start the app from the car5g folder using
 
@@ -25,18 +23,9 @@ or
 mix run --no-halt
 ```
 
-## Description
-
-The application subscribes to a few signals according to the 5g car specification.
-Subscription is done using grpc to the sinalbroker. Gprc host adress is "localhost:50051" which currently assumes that this app runs on them same machine as the sinalbroker.
-
-The subscribed signals are then dispatched every 100ms to 192.168.111.1:2017 which is the host box.
-
-The raspberry will be assigned ip address from the host box.
-
 ## Reference: generation of the ex files from the proto files:
 
 from this folder
 ```bash
-protoc -I ../../../../apps/grpc_service/proto_files/  --elixir_out=plugins=grpc:./lib/proto_files ../../../../apps/grpc_service/proto_files/*.proto
+protoc -I ../../../../apps/grpc_service/proto_files/  --elixir_out=plugins=grpc:./lib/generated_proto_files ../../../../apps/grpc_service/proto_files/*.proto
 ```

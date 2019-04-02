@@ -1,4 +1,4 @@
-defmodule Car5g.Server do
+defmodule Car5g.Client do
 
   use GenServer
   require Logger

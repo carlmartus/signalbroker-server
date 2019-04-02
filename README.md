@@ -64,6 +64,13 @@ once you configured your interfaces.json to use virtual can interfaces by settin
 canplayer vcan0=can0 -I myfile.log
 ```
 
+## Running examples with fake data
+
+install can-utils as described above the generate fake data using:
+```
+cangen vcan0  -v -g 4
+```
+
 ## TODO
 - [ ] Provide pre build docker image
 - [x] Add default configuration

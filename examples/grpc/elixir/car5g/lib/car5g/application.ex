@@ -9,7 +9,7 @@ defmodule Car5g.Application do
     # List all child processes to be supervised
     children = [
       Supervisor.child_spec({Car5g,{:runner_5g_client, :tcp_connection}}, id: :car5gClient),
-      Supervisor.child_spec({Car5g.Server,{:tcp_connection, :runner_5g_client, '192.168.111.1', 2017}}, id: :tcp_connection)
+      Supervisor.child_spec({Car5g.Client,{:tcp_connection, :runner_5g_client, 'your_target_host', 2017}}, id: :tcp_connection)
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
