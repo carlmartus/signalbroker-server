@@ -1,6 +1,5 @@
 # UDP CAN application
 Receives CAN frames from UDP devices.
-Such as a *VIU* Texas board programmed by John Fredriksson.
 
 In order to share functionality with [app_ngcan](../app_ngcan), a library [can](../can) contains shared functionality.
 

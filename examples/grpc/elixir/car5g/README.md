@@ -3,9 +3,9 @@
 ## Example application
 
 The sample application subscribes to a few signals and dispatches them to a given server (some.host:2017) with a given time intrvall.
-Subscription is done using grpc to the sinalbroker. Gprc host address is "localhost:50051" which currently assumes that this app runs on them same machine as the signalbroker.
+Subscription is done using gRPC to the sinalbroker. gRPC host address is "localhost:50051" which currently assumes that this app runs on them same machine as the signalbroker.
 
-The subscribed signals are then dispatched every 100ms to some_host:2017.
+The subscribed signals are then dispatched every 100ms to `some_host:2017`.
 
 ## Installation, configuration
 

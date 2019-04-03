@@ -14,7 +14,7 @@ Add the line to `deps` array.
 
 ### JSON format
 The local configuration file `configuration/interfaces.json` has to have the correct structure in order to work.
-Have a look at the [default configuration file](/signal_server/configuration/interfaces.json) to get a understanding of the structure.
+Have a look at the [default configuration file](configuration/interfaces.json) to get a understanding of the structure.
 
 I/O communicating with the signal broker have their configuration under the tag `chains`.
 Where each section has their type of I/O defined by the tag `type`.
@@ -34,11 +34,6 @@ Shared parameters:
 | `fixed_payload_size` | Set fixed payload size in bytes      | `8`           |
 
 For `app_ngcan` `device_name` is the name of the CAN interface.
-
-> Hint:
-> [Fields for `app_ngcan`](/signal_server/apps/app_ngcan/README.md#config-fields)
-> and
-> [fields for `app_updcan`](/signal_server/apps/app_udpcan/README.md#config-fields).
 
 ## Forwarder `Util.Forwarder`
 Synchronous testing in a asynchronous world.
