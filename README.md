@@ -46,7 +46,7 @@ However, the preferred way of accessing the system is by using grpc. Follow this
 
 ```
 mix deps.get
-ies -S mix
+iex -S mix
 ```
 
 ## Playback for off line purposes
