@@ -33,6 +33,8 @@ Works is ongoing for canfd support which is in experimental stage.
 
 ## Accessing the server
 
+Signalbroker is headless but can be accessed using the grpc-web [frontend](https://github.com/volvo-cars/signalbroker-web-client)
+
 To get aquainted to the system the easiest way to get going is by checking out the simple [telnet guide](apps/app_telnet/README.md)
 
 However, the preferred way of accessing the system is by using grpc. Follow this [link](apps/app_telnet/README.md)
