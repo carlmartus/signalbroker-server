@@ -26,7 +26,7 @@ In order to access real can the following hardware can be used.
 Suggested hardware
 * Raspberry pi
 * [can shield](https://copperhilltech.com/pican2-duo-can-bus-board-for-raspberry-pi-2-3/)
-* [lin DYI](https://gitlab.cm.volvocars.biz/SABBASPO/volvo-linbus)
+* [lin DYI](https://github.com/volvo-cars/signalbroker-lin-transceiver/tree/master)
 
 Works is ongoing for canfd support which is in experimental stage.
 * [canfd shield](https://copperhilltech.com/pican-fd-can-bus-fd-duo-board-with-real-time-clock-for-raspberry-pi/)
