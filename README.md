@@ -37,7 +37,7 @@ Signalbroker is headless but can be accessed using the grpc-web [frontend](https
 
 To get aquainted to the system the easiest way to get going is by checking out the simple [telnet guide](apps/app_telnet/README.md)
 
-However, the preferred way of accessing the system is by using grpc. Follow this [link](apps/app_telnet/README.md)
+However, the preferred way of accessing the system is by using grpc. Follow this [link](/apps/grpc_service/proto_files) to find the protofiles, and browse the [examples](/examples/grpc) to get inspiration 
 
 ## Starting the server
 
@@ -70,7 +70,7 @@ canplayer vcan0=can0 -I myfile.log
 
 install can-utils as described above the generate fake data using:
 ```
-cangen vcan0  -v -g 4
+cangen vcan0  -v -g 1
 ```
 
 ## TODO
