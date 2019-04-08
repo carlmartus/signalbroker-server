@@ -111,17 +111,19 @@ defmodule Payload.Descriptions do
   def handle_call({:get_field_by_id, id}, _from, state),
     do: {:reply, Map.get(state.map_id, id), state}
 
-
   def handle_call({:get_all_names_tree}, _, state) do
     all_ids = Map.keys(state.map_id)
     everything = Enum.map(all_ids, fn(frame_id) ->
       frame = Map.get(state.map_id, frame_id)
-      [%Payload.Descriptions.Field{name: frame_name}] = Enum.filter(frame.fields, fn(%Payload.Descriptions.Field{is_frame: is_frame}) -> is_frame == true end)
-      %Frame{frame | name: frame_name, fields: Enum.reject(frame.fields, fn(%Payload.Descriptions.Field{is_frame: is_frame}) -> is_frame == true end)}
+      case Enum.filter(frame.fields, fn(%Payload.Descriptions.Field{is_frame: is_frame}) -> is_frame == true end) do
+        [] ->
+          %Frame{frame | name: "missing_header_#{inspect frame.id}", fields: Enum.reject(frame.fields, fn(%Payload.Descriptions.Field{is_frame: is_frame}) -> is_frame == true end)}
+        [%Payload.Descriptions.Field{name: frame_name}] ->
+          %Frame{frame | name: frame_name, fields: Enum.reject(frame.fields, fn(%Payload.Descriptions.Field{is_frame: is_frame}) -> is_frame == true end)}
+      end
     end)
     {:reply, everything, state}
   end
-
 
   def handle_call({:info_map, id, payload}, _from, state) do
     case Map.get(state.map_id, id) do
