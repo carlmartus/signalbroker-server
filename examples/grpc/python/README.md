@@ -1,4 +1,4 @@
-# MINI GRPC PYTHON EXAMPLE
+# tiny grpc python example
 
 ## Installation, configuration
 
@@ -8,7 +8,7 @@ inspiration from
 https://grpc.io/docs/tutorials/basic/python.html
 
 
-proto files are avalible in: [signal_server/apps/grpc_service/proto_files/](/signal_server/apps/grpc_service/proto_files/)
+proto files are available in: [signal_server/apps/grpc_service/proto_files/](/signal_server/apps/grpc_service/proto_files/)
 
 ## Setup
 pip install grpcio-tools

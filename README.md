@@ -6,6 +6,11 @@ Development tool to access CAN/LIN and other buses using gRPC which allows usage
 
 Documentation is still ongoing, Project is operational but custom dbc/ldf/human fields are required.
 
+## Teaser
+
+![Components](/examples/grpc/grpc-web/Screenshot_2019-04-08_signal-broker.png)
+keep reading...
+
 ## Hardware
 
 The software can execute on any Linux with [SocketCAN](https://en.wikipedia.org/wiki/SocketCAN). On hosts without hardware CAN interfaces, CAN be configured using:
@@ -36,7 +41,7 @@ Signalbroker is headless but can be accessed using the grpc-web [frontend](https
 
 To get aquainted to the system the easiest way to get going is by checking out the simple [telnet guide](apps/app_telnet/README.md)
 
-However, the preferred way of accessing the system is by using gRPC. Follow this [link](apps/app_telnet/README.md).
+However, the preferred way of accessing the system is by using grpc. Follow this [link](/apps/grpc_service/proto_files) to find the protofiles, and browse the [examples](/examples/grpc) to get inspiration
 
 ## Starting the server
 
@@ -67,7 +72,7 @@ canplayer vcan0=can0 -I myfile.log
 ## Running examples with fake data
 Install `can-utils` as described above the generate fake data using:
 ```
-cangen vcan0  -v -g 4
+cangen vcan0  -v -g 1
 ```
 
 ## Todo
