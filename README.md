@@ -6,6 +6,11 @@ Development tool to access can/lin and other buses using grpc which allows usage
 
 Documentaion is still ongoing, Project is operational but custom dbc/ldf/human fields are required.
 
+## Teaser
+
+![Components](/examples/grpc/grpc-web/Screenshot_2019-04-08_signal-broker.png)
+keep reading...
+
 ## Hardware
 
 The software can execute on any linux with socketcan. On hosts without hardware can interfaces can be configured using:
@@ -37,7 +42,7 @@ Signalbroker is headless but can be accessed using the grpc-web [frontend](https
 
 To get aquainted to the system the easiest way to get going is by checking out the simple [telnet guide](apps/app_telnet/README.md)
 
-However, the preferred way of accessing the system is by using grpc. Follow this [link](/apps/grpc_service/proto_files) to find the protofiles, and browse the [examples](/examples/grpc) to get inspiration 
+However, the preferred way of accessing the system is by using grpc. Follow this [link](/apps/grpc_service/proto_files) to find the protofiles, and browse the [examples](/examples/grpc) to get inspiration
 
 ## Starting the server
 

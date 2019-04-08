@@ -1,4 +1,4 @@
-# MINI GRPC PYTHON EXAMPLE
+# tiny grpc python example
 
 ## Installation, configuration
 
